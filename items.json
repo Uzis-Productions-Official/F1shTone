@@ -1,1 +1,41 @@
-
+{
+  "minecraft:planks": {
+    "craftable": true,
+    "recipe": [["minecraft:log"]],
+    "output": 4
+  },
+  "minecraft:stick": {
+    "craftable": true,
+    "recipe": [
+      ["minecraft:planks"],
+      ["minecraft:planks"]
+    ],
+    "output": 4
+  },
+  "minecraft:crafting_table": {
+    "craftable": true,
+    "recipe": [
+      ["minecraft:planks", "minecraft:planks"],
+      ["minecraft:planks", "minecraft:planks"]
+    ],
+    "output": 1
+  },
+  "minecraft:wooden_pickaxe": {
+    "craftable": true,
+    "recipe": [
+      ["minecraft:planks", "minecraft:planks", "minecraft:planks"],
+      [null, "minecraft:stick", null],
+      [null, "minecraft:stick", null]
+    ],
+    "output": 1
+  },
+  "minecraft:stone_pickaxe": {
+    "craftable": true,
+    "recipe": [
+      ["minecraft:cobblestone", "minecraft:cobblestone", "minecraft:cobblestone"],
+      [null, "minecraft:stick", null],
+      [null, "minecraft:stick", null]
+    ],
+    "output": 1
+  }
+}
