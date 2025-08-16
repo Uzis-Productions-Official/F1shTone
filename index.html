@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>F1shPr0 + Eaglercraft Launcher</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    html,body { margin:0; height:100%; overflow:hidden; background:#000; font-family: ui-monospace, Menlo, Consolas, monospace; }
+    /* Eaglercraft iframe */
+    #gameFrame { position:absolute; inset:0; width:100%; height:100%; border:none; z-index:1; }
 
+    /* Bottom-left launcher button */
+    #openClientBtn {
+      position: fixed; bottom: 12px; left: 12px; z-index: 10000;
+      padding: 10px 14px; border-radius: 10px; border:1px solid #2a3; background: rgba(0,0,0,.7);
+      color: #cfffdf; cursor: pointer; user-select:none;
+    }
+    #openClientBtn:hover { border-color:#3c6; }
+
+    /* Overlay menu */
+    #f1Menu {
+      position: fixed; top: 56px; right: 32px; width: 360px; max-height: 80vh; overflow:auto;
+      z-index: 9999; display: none; color: #eafff3;
+      background: linear-gradient(180deg, rgba(12,16,20,.97), rgba(6,10,14,.97));
+      border:1px solid #163327; border-radius: 14px; box-shadow: 0 18px 50px #000a; padding: 14px;
+    }
+    .row{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+    .btn {
+      padding: 8px 10px; border:1px solid #1f3a2f; border-radius: 10px; background:#0b1318; color:#eafff3; cursor:pointer;
+    }
+    .btn:hover { border-color:#2f6a4f; }
+    .muted { color:#9fcdbb; font-size:12px; }
+    .pill { border:1px solid #2a4; padding:2px 8px; border-radius:999px; }
+    .log { height:140px; overflow:auto; background:#050a0e; border:1px solid #1a2a2a; border-radius:10px; padding:8px; font-size:12px; }
+  </style>
+</head>
+<body>
+  <!-- Your Eaglercraft file (keep the exact filename with spaces) -->
+  <iframe id="gameFrame" src="Release 1.8.8.html"></iframe>
+
+  <!-- Bottom-left open button -->
+  <button id="openClientBtn">🐟 Open F1shPr0</button>
+
+  <!-- Bot overlay -->
+  <div id="f1Menu">
+    <div class="row" style="justify-content:space-between; margin-bottom:6px;">
+      <div><b>F1shPr0 Client</b></div>
+      <div class="muted">open <span class="pill">Right&nbsp;Shift</span> • close <span class="pill">Right&nbsp;Ctrl</span></div>
+    </div>
+
+    <div class="row">
+      <button class="btn" id="btnGet">Get (soon)</button>
+      <button class="btn" id="btnGoto">Goto (soon)</button>
+      <button class="btn" id="btnTrack">Track (soon)</button>
+      <button class="btn" id="btnBuild">Build (soon)</button>
+    </div>
+
+    <div style="height:8px"></div>
+    <div class="log" id="log"></div>
+  </div>
+
+  <script src="f1shpr0.js"></script>
+  <script>
+    // Hotkeys to open/close the client
+    const menu = document.getElementById('f1Menu');
+    document.addEventListener('keydown', e=>{
+      if (e.code==='ShiftRight') menu.style.display='block';
+      if (e.code==='ControlRight') menu.style.display='none';
+    });
+
+    // Bottom-left toggle
+    document.getElementById('openClientBtn').onclick = ()=>{
+      menu.style.display = (menu.style.display==='block') ? 'none' : 'block';
+    };
+  </script>
+</body>
+</html>
