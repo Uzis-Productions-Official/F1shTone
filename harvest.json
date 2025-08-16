@@ -1,1 +1,45 @@
-
+{
+  "minecraft:log": {
+    "tool": "any",
+    "drops": "minecraft:log"
+  },
+  "minecraft:planks": {
+    "craft_only": true
+  },
+  "minecraft:cobblestone": {
+    "tool": "wooden_pickaxe",
+    "drops": "minecraft:cobblestone"
+  },
+  "minecraft:coal_ore": {
+    "tool": "wooden_pickaxe",
+    "drops": "minecraft:coal"
+  },
+  "minecraft:iron_ore": {
+    "tool": "stone_pickaxe",
+    "drops": "minecraft:iron_ore"
+  },
+  "minecraft:diamond_ore": {
+    "tool": "iron_pickaxe",
+    "drops": "minecraft:diamond"
+  },
+  "minecraft:gold_ore": {
+    "tool": "iron_pickaxe",
+    "drops": "minecraft:gold_ore"
+  },
+  "minecraft:redstone_ore": {
+    "tool": "iron_pickaxe",
+    "drops": "minecraft:redstone"
+  },
+  "minecraft:obsidian": {
+    "tool": "diamond_pickaxe",
+    "drops": "minecraft:obsidian"
+  },
+  "minecraft:leaves": {
+    "tool": "any",
+    "drops": "minecraft:sapling"
+  },
+  "minecraft:grass_block": {
+    "tool": "any",
+    "drops": "minecraft:dirt"
+  }
+}
